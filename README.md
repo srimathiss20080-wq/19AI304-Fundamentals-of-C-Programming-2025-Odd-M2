@@ -193,7 +193,38 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 # Program:
 ```
+#include <stdio.h>
 
+int main()
+{
+    int n, i = 2, f = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n <= 1)
+    {
+        printf("%d is not a prime number.\n", n);
+        return 0;
+    }
+
+    while (i <= n - 1)
+    {
+        if (n % i == 0)
+        {
+            f = 1;
+            break;
+        }
+        i++;
+    }
+
+    if (f == 0)
+        printf("%d is a prime number.\n", n);
+    else
+        printf("%d is not a prime number.\n", n);
+
+    return 0;
+}
 ```
 # Output:
 <img width="1558" height="738" alt="image" src="https://github.com/user-attachments/assets/00b1c60b-73c8-4861-8622-c6d2e442546b" />
